@@ -1,133 +1,133 @@
-console.log('Hello world!');
-let age: number = 30;
-if (age < 50)
-    age += 10;
+// console.log('Hello world!');
+// // let age: number = 30;
+// // if (age < 50)
+// //     age += 10;
 
-console.log(age);
+// // console.log(age);
 
-let sales: number = 123_456_789;
-let course: string = 'TypeScript';
-let is_published: boolean = true;
+// // let sales: number = 123_456_789;
+// // let course: string = 'TypeScript';
+// let is_published: boolean = true;
 
-// any
-// function add(document) {
-//     return document;
+// // any
+// // function add(document) {
+// //     return document;
+// // }
+
+// // array
+// let numbers: number[] = [];
+
+// // tuple
+
+// let num_tuple: [number, string] = [1, 'a'];
+
+// // enum
+// // const small = 1;
+// // const medium = 2;
+// // const large = 3;
+
+// // PascalCase
+// const enum Size {Small = 1, Medium, Large}
+
+// let mySize: Size = Size.Medium;
+// console.log(mySize);
+
+// // function
+// function calculateTax(income: number, taxYear: number = 2022): number {
+//     let x: number = 2022;
+//     if (taxYear < x)
+//         return income * 1.2;
+//     return income * 1.3;
 // }
 
-// array
-let numbers: number[] = [];
+// // calculateTax(income: 1, taxYear: 2);
 
-// tuple
+// // object
+// let employee: { 
+//     readonly id: number,
+//     name: string,
+//     retire: (date: Date) => void
+// } = {
+//     id: 1, 
+//     name: 'bac',
+//     retire: (date: Date) => {
+//         console.log(date);
+//     }
+// };
 
-let num_tuple: [number, string] = [1, 'a'];
+// // alias
+// type Employee = {
+//     readonly id: number,
+//     name: string,
+//     retire: (date: Date) => void
+// }
 
-// enum
-// const small = 1;
-// const medium = 2;
-// const large = 3;
+// let employee2: Employee = {
+//     id: 1,
+//     name: 'a',
+//     retire: (date: Date) => {
+//         console.log(date);
+//     }
+// }
 
-// PascalCase
-const enum Size {Small = 1, Medium, Large}
+// // union
+// function kgToLbs(weight: number | string): number {
+//     // Narrowing
+//     if (typeof weight === 'number')
+//         return weight * 2.2;
+//     else
+//         return parseInt(weight) * 2.2;
+// }
 
-let mySize: Size = Size.Medium;
-console.log(mySize);
+// // intersection
+// type Draggable = {
+//     drag: () => void;
+// };
 
-// function
-function calculateTax(income: number, taxYear: number = 2022): number {
-    let x: number = 2022;
-    if (taxYear < x)
-        return income * 1.2;
-    return income * 1.3;
-}
+// type Resizable = {
+//     resize: () => void;
+// }
 
-calculateTax(income: 1, taxYear: 2);
+// type UIWidget = Draggable & Resizable;
 
-// object
-let employee: { 
-    readonly id: number,
-    name: string,
-    retire: (date: Date) => void
-} = {
-    id: 1, 
-    name: 'bac',
-    retire: (date: Date) => {
-        console.log(date);
-    }
-};
+// let textBox: UIWidget = {
+//     drag: () => {},
+//     resize: () => {}
+// };
 
-// alias
-type Employee = {
-    readonly id: number,
-    name: string,
-    retire: (date: Date) => void
-}
+// // literal (exact, specific)
+// type Quantity = 50 | 100;
 
-let employee2: Employee = {
-    id: 1,
-    name: 'a',
-    retire: (date: Date) => {
-        console.log(date);
-    }
-}
+// let quantity: Quantity = 100;
 
-// union
-function kgToLbs(weight: number | string): number {
-    // Narrowing
-    if (typeof weight === 'number')
-        return weight * 2.2;
-    else
-        return parseInt(weight) * 2.2;
-}
+// type Level = 'A' | 'B';
+// let myLevel: Level = 'A';
 
-// intersection
-type Draggable = {
-    drag: () => void;
-};
+// // Nullable type
+// function greet(name: string) {
+//     if(name)
+//         console.log(name.toUpperCase());
+//     else
+//         console.log('Hola!');
+// }
 
-type Resizable = {
-    resize: () => void;
-}
+// // greet(undefined);
 
-type UIWidget = Draggable & Resizable;
+// // Optional chaining
+// type Customer = {
+//     birthday: Date
+// };
 
-let textBox: UIWidget = {
-    drag: () => {},
-    resize: () => {}
-};
+// function getCustomer(id: number): Customer | null {
+//     return id === 0? null: {birthday: new Date() };
+// }
 
-// literal (exact, specific)
-type Quantity = 50 | 100;
+// let customer = getCustomer(0);
+// // if (customer != null && customer != undefined)
+// // optional property access operator
+//     console.log(customer?.birthday);
 
-let quantity: Quantity = 100;
-
-type Level = 'A' | 'B';
-let myLevel: Level = 'A';
-
-// Nullable type
-function greet(name: string) {
-    if(name)
-        console.log(name.toUpperCase());
-    else
-        console.log('Hola!');
-}
-
-greet(undefined);
-
-// Optional chaining
-type Customer = {
-    birthday: Date
-};
-
-function getCustomer(id: number): Customer | null {
-    return id === 0? null: {birthday: new Date() };
-}
-
-let customer = getCustomer(0);
-// if (customer != null && customer != undefined)
-// optional property access operator
-    console.log(customer?.birthday);
-
-// optional element access operator
-// if (customer != null && customer != undefined)
-//  customer[0]
-    customer?.[0];
+// // optional element access operator
+// // if (customer != null && customer != undefined)
+// //  customer[0]
+//     // customer?.[0];
