@@ -5,7 +5,8 @@ steps:
     args: [
       'build',
       '-t',
-      'us-central1-docker.pkg.dev/qwiklabs-gcp-03-db07673ae0bd/typescript/node:20.14.0-alpine'
+      'us-central1-docker.pkg.dev/qwiklabs-gcp-03-db07673ae0bd/typescript/node:20.14.0-alpine',
+      '.'
     ]
 
   - name: 'gcr.io/cloud-builders/docker'
