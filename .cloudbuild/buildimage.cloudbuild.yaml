@@ -1,0 +1,18 @@
+steps:
+  # Docker Build
+  - name: 'gcr.io/cloud-builders/docker'
+    id: 'Build image'
+    args: [
+      'build',
+      '-t',
+      'us-central1-docker.pkg.dev/qwiklabs-gcp-03-db07673ae0bd/typescript/node:20.14.0-alpine'
+    ]
+
+  - name: 'gcr.io/cloud-builders/docker'
+    id: 'Push the image to Artifact Registry'
+    args: [
+      'push',
+      'us-central1-docker.pkg.dev/qwiklabs-gcp-03-db07673ae0bd/typescript/node:20.14.0-alpine'
+    ]
+
+# Store image in Artifact Registry
