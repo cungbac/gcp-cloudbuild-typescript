@@ -1,0 +1,19 @@
+steps:
+- name: 'node'
+  id: 'Install dependencies'
+  entrypoint: 'npm'
+  args: ['install']
+
+- name: 'node'
+  id: 'Run lint'
+  waitFor:
+    - 'Install dependencies'
+  entrypoint: 'npm'
+  args: ['run', 'lint']
+
+- name: 'node'
+  id: 'Run test'
+  waitFor:
+    - 'Run lint'
+  entrypoint: 'npm'
+  args: ['test']
