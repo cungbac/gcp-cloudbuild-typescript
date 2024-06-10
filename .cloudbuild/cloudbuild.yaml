@@ -1,17 +1,17 @@
 steps:
-- name: 'us-central1-docker.pkg.dev/qwiklabs-gcp-03-db07673ae0bd/typescript/node:20.14.0-alpine'
+- name: 'node:22-alpine3.19'
   id: 'Install dependencies'
   entrypoint: 'npm'
   args: ['install']
 
-- name: 'us-central1-docker.pkg.dev/qwiklabs-gcp-03-db07673ae0bd/typescript/node:20.14.0-alpine'
+- name: 'node:22-alpine3.19'
   id: 'Run lint'
   waitFor:
     - 'Install dependencies'
   entrypoint: 'npm'
   args: ['run', 'lint']
 
-- name: 'us-central1-docker.pkg.dev/qwiklabs-gcp-03-db07673ae0bd/typescript/node:20.14.0-alpine'
+- name: 'node:22-alpine3.19'
   id: 'Run test'
   waitFor:
     - 'Run lint'
