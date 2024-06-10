@@ -3,9 +3,11 @@ steps:
   id: 'Install dependencies'
   entrypoint: 'sh'
   args:
-    - 'c'
+    - '-c'
     - |
       rm -f package-lock.json
+      echo "Done remove package-lock.json"
+      echo "Installing dependencies"
       nmp install
 
 - name: 'node:22-alpine3.19'
