@@ -11,14 +11,14 @@ steps:
 #       echo "Installing dependencies"
 #       npm install
 
-- name: 'node:22-alpine3.19'
+- name: 'us-central1-docker.pkg.dev/qwiklabs-gcp-00-502aef9154d0/typescript/node:20.14.0-alpine'
   id: 'Run lint'
   # waitFor:
   #   - 'Install dependencies'
   entrypoint: 'npm'
   args: ['run', 'lint']
 
-- name: 'node:22-alpine3.19'
+- name: 'us-central1-docker.pkg.dev/qwiklabs-gcp-00-502aef9154d0/typescript/node:20.14.0-alpine'
   id: 'Run test'
   waitFor:
     - 'Run lint'
