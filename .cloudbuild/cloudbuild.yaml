@@ -5,8 +5,9 @@ steps:
   args:
     - '-c'
     - |
+      echo "Removing package-lock.json"
       rm -f package-lock.json
-      echo "Done remove package-lock.json"
+      echo "--------------------------"
       echo "Installing dependencies"
       npm install
 
