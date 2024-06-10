@@ -1,15 +1,15 @@
 steps:
-- name: 'node:22-alpine3.19'
-  id: 'Install dependencies'
-  entrypoint: 'sh'
-  args:
-    - '-c'
-    - |
-      echo "Removing package-lock.json"
-      rm -f package-lock.json
-      echo "--------------------------"
-      echo "Installing dependencies"
-      npm install
+# - name: 'node:22-alpine3.19'
+#   id: 'Install dependencies'
+#   entrypoint: 'sh'
+#   args:
+#     - '-c'
+#     - |
+#       echo "Removing package-lock.json"
+#       rm -f package-lock.json
+#       echo "--------------------------"
+#       echo "Installing dependencies"
+#       npm install
 
 - name: 'node:22-alpine3.19'
   id: 'Run lint'
