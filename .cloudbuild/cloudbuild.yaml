@@ -8,7 +8,7 @@ steps:
       rm -f package-lock.json
       echo "Done remove package-lock.json"
       echo "Installing dependencies"
-      nmp install
+      npm install
 
 - name: 'node:22-alpine3.19'
   id: 'Run lint'
